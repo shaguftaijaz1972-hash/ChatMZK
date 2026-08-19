@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ChatMZK AI</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar">
+
+        <!-- Logo -->
+        <div class="logo">
+
+            <img
+                src="{{ url_for('static', filename='images/logo.png') }}"
+                alt="ChatMZK Logo">
+
+            <h2>ChatMZK</h2>
+
+            <p>Rehan Ahmad AI Assistant</p>
+
+        </div>
+
+
+        <!-- Search -->
+        <div class="chat-search">
+
+            <input
+                type="text"
+                id="searchChat"
+                placeholder="Search chats...">
+
+        </div>
+
+
+        <!-- Chat History -->
+        <div class="chat-history">
+
+            <div class="history-title">
+                Recent Chats
+            </div>
+
+            <ul
+                id="chatList"
+                class="chat-list">
+            </ul>
+
+        </div>
+
+
+        <!-- Sidebar Footer -->
+        <div class="sidebar-footer">
+
+        
+
+
+            <button
+                id="shareBtn"
+                class="menu-btn">
+
+                📲 Share ChatMZK
+
+            </button>
+
+
+            <button
+                id="clearChatBtn"
+                class="menu-btn">
+
+                🗑 Clear Chat
+
+            </button>
+
+
+            <button
+                id="logoutBtn"
+                class="menu-btn">
+
+                🚪 Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================
+         MAIN CHAT AREA
+    ====================================== -->
+
+    <main class="chat-area">
+
+
+        <!-- Header -->
+        <header class="chat-header">
+
+            <div class="chat-header-info">
+
+                <h1>
+                    ChatMZK AI
+                </h1>
+
+                <span>
+                    Rehan Ahmad AI Assistant
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================
+             MESSAGES
+        ================================== -->
+
+        <section
+            id="messages"
+            class="messages">
+
+
+            <!-- Welcome Screen -->
+
+            <div
+                id="welcomeScreen"
+                class="welcome-screen">
+
+                <img
+                    src="{{ url_for('static', filename='images/logo.png') }}"
+                    alt="ChatMZK Logo">
+
+                <h2>
+                    Welcome to ChatMZK AI
+                </h2>
+
+                <p>
+                    Start a new conversation or ask me anything.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             TYPING INDICATOR
+        ================================== -->
+
+        <div
+            id="typingIndicator"
+            class="typing-indicator"
+            style="display:none;">
+
+            ChatMZK is typing...
+
+        </div>
+
+
+        <!-- =================================
+             INPUT AREA
+        ================================== -->
+
+        <div class="chat-input-area">
+
+           
+            </button>
+
+
+            <!-- Hidden File Input -->
+
+            <input
+                type="file"
+                id="fileInput"
+                accept=".txt,.pdf,.docx"
+                hidden>
+
+
+            <!-- Message Input -->
+
+            <textarea
+                id="userInput"
+                placeholder="Message ChatMZK AI..."
+                rows="1"></textarea>
+
+
+            <!-- Send Button -->
+
+            <button
+                id="sendBtn"
+                class="send-btn"
+                title="Send Message">
+
+                ➤
+
+            </button>
+
+        </div>
+
+
+
+<!-- =====================================
+     JAVASCRIPT
+====================================== -->
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
