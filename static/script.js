@@ -895,40 +895,6 @@ document.addEventListener(
 
     }
 );
-// ==========================================
-// Share ChatMZK
-// ==========================================
-
-const shareBtn = document.getElementById("shareBtn");
-
-if (shareBtn) {
-    shareBtn.addEventListener("click", async () => {
-
-        const shareUrl = window.location.href;
-
-        try {
-
-            if (navigator.share) {
-
-                await navigator.share({
-                    title: "ChatMZK AI",
-                    text: "ChatMZK AI open karein",
-                    url: shareUrl
-                });
-
-            } else {
-
-                await navigator.clipboard.writeText(shareUrl);
-
-                alert("ChatMZK ka link copy ho gaya!");
-
-            }
-
-        } catch (error) {
-
-            console.log("Share cancelled");
-
-        }
 
     });
 }
