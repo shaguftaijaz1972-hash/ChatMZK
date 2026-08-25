@@ -895,6 +895,3 @@ document.addEventListener(
 
     }
 );
-
-    });
-}
