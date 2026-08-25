@@ -367,11 +367,14 @@ sendBtn.addEventListener(
 // New Chat Button
 // ===============================
 
-newChatBtn.addEventListener(
-    "click",
-    createNewChat
-);
+if (newChatBtn) {
 
+    newChatBtn.addEventListener(
+        "click",
+        createNewChat
+    );
+
+}
 
 // ===============================
 // Load Chats
