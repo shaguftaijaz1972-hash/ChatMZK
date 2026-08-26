@@ -37,6 +37,8 @@ load_dotenv()
 client = genai.Client(
     api_key=os.getenv("GEMINI_API_KEY")
 )
+print("GEMINI KEY LOADED:", bool(os.getenv("GEMINI_API_KEY")))
+print("GEMINI KEY LENGTH:", len(os.getenv("GEMINI_API_KEY", "")))
 
 
 # ==========================================
