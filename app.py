@@ -188,6 +188,18 @@ init_db()
 
 print("DATABASE INITIALIZED:", DATABASE)
 
+# ==========================================
+# Google Search Console Verification
+# ==========================================
+
+@app.route("/google5625d49a8d5f6c87.html")
+def google_verification():
+
+    return send_from_directory(
+        ".",
+        "google5625d49a8d5f6c87.html"
+    )
+
 
     # ==========================================
 # Home
